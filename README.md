@@ -1,1 +1,1 @@
-# kanban-clone-app
+A canban clone application on vanilla java-script.
