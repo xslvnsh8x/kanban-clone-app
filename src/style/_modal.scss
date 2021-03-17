@@ -1,0 +1,93 @@
+@import "variables";
+
+.modal {
+
+  &.open .modalOverlay,
+  &.open .modalWindow {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  &.hide .modalOverlay,
+  &.hide .modalWindow {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  &.open .modalWindow {
+    transform: translateY(200px);
+  }
+
+  &.open .modalOverlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &.hide .modalWindow {
+    transform: translateY(-200px);
+  }
+
+  &.hide .modalOverlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &Window,
+  &Overlay {
+    opacity: 0;
+    z-index: -10;
+  }
+
+  &Overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.2s ease-in;
+  }
+
+  &Window {
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 7px;
+    background: $alabaster;
+    transform: translateY(-200px);
+    transition: transform 0.2s ease-in;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid $alto;
+
+    &-title {
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+      font-weight: 500;
+    }
+
+    &-close {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  &__body {
+    padding: 10px;
+  }
+
+  &__footer {
+    padding: 10px 20px;
+    border-top: 1px solid $alto;
+
+    &-primary {
+      background: dodgerblue;
+    }
+
+    &-danger {
+      background: darkred;
+    }
+  }
+}

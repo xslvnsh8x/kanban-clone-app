@@ -1,0 +1,29 @@
+@import "normalize";
+@import "variables";
+@import "common";
+@import "kanban";
+@import "modal";
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background: $concrete;
+  color: $mineShaft;
+  font-size: 16px;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.center {
+  padding: 0 calc(50% - 600px);
+}
+
+.btn {
+  width: 100px;
+  height: 41px;
+  font-size: 1.1rem;
+  color: $alabaster;
+  border-radius: 7px;
+}
